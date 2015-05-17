@@ -7,7 +7,7 @@ For more info, visit the [official workshop site](http://www.binaura.net/stc/ws/
 
 ## Installation instructions
 
-Download & install [Pure Data](http://puredata.info/downloads) and [Processing](https://processing.org/download/). Select your operating system, the java library that we use for connecting these two tools is compiled for all major platforms. The library is included in the source, but if you are interested in what's going on under the hood, you can check the original source of [LibPd](https://github.com/libpd). There is also a nice set of examples at the official [LibPd site](http://www.libpd.cc).
+Download & install [Pure Data](http://puredata.info/downloads) and [Processing](https://processing.org/download/). Select your operating system, the java library that we use for connecting these two tools is compiled for all major platforms. The library is included in the source, but if you are interested in what's going on under the hood, you can check the original source, aka the processing repository of [LibPd](https://github.com/libpd/puredatap5/). There are interesting examples at the official [LibPd site](http://www.libpd.cc) on LibPd related projects.
 
 ## Folder Structure
 
