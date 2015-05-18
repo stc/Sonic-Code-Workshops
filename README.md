@@ -28,15 +28,15 @@ There are interesting examples at the official [LibPd site](http://www.libpd.cc)
 All the examples are look like this:
 
 .     
-sketchname.pde             # our main processing sketch (same name as folder name)     
-... .pde                   # additional files, classes, functions, if we have     
-data                       # any external content we use within the sketch     
---- patchname.pd           # our main pd patch     
---- images                 # if we have images, put them here     
---- sound                  # if we have sounds, put them here     
---- ...                    # textfiles, videos, tables, etc.     
-code    
---- libraryname.jar        # if we use other libs, we can put them here or in the processing folder     
+**sketchname.pde** our main processing sketch (same name as folder name)     
+**... .pde** additional files, classes, functions, if we have     
+**data** any external content we use within the sketch     
+**--- patchname.pd** our main pd patch     
+**--- images** if we have images, put them here     
+**--- sounds** if we have sounds, put them here     
+**--- ...** textfiles, videos, tables, etc.     
+**code**    
+**--- libraryname.jar** if we use other libs, we can put them here or in the processing folder     
 
 
 ## Editing
