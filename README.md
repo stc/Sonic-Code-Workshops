@@ -26,15 +26,25 @@ There are interesting examples at the official [LibPd site](http://www.libpd.cc)
 ## Folder Structure
 
 All the examples are look like this:
+
 .
+
 ├── sketchname.pde             # our main processing sketch (same name as folder name)
+
 ├── ...additional java files   # additional files, classes, functions, if we have
+
 ├── data                       # any external content we use within the sketch
+
 │   ├── patchname.pd           # our main pd patch
+
 │   ├── images                 # if we have images, put them here
+
 │   ├── sound                  # if we have sounds, put them here
+
 │   └── ...                    # textfiles, videos, tables, etc.
+
 └── code
+
 	└── libraryname.jar        # if we use other libs, we can put them here or in the processing folder
 
 ## Editing
