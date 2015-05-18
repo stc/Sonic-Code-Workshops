@@ -26,7 +26,7 @@ There are interesting examples at the official [LibPd site](http://www.libpd.cc)
 ## Folder Structure
 
 All the examples are look like this:
-
+`
 .     
 ├── sketchname.pde             # our main processing sketch (same name as folder name)     
 ├── ...additional java files   # additional files, classes, functions, if we have     
@@ -37,6 +37,7 @@ All the examples are look like this:
 │   └── ...                    # textfiles, videos, tables, etc.     
 └── code     
 	└── libraryname.jar        # if we use other libs, we can put them here or in the processing folder     
+`
 
 ## Editing
 
