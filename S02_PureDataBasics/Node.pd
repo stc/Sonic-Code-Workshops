@@ -1,0 +1,22 @@
+#N canvas 335 227 1025 597 10;
+#X text 69 89 I'm an abstraction \, in a separate file. Use me if you
+want to make modular code and would like to avoid repetitive patching.
+;
+#X obj 71 157 inlet;
+#X obj 70 335 outlet;
+#X obj 211 522 print;
+#X obj 209 267 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 209 334 float \$0;
+#X text 242 265 click to print unique ID of this abstraction;
+#X text 204 200 VARIABLES;
+#X obj 283 418 send \$0-myLocalVar;
+#X obj 284 445 receive \$0-myLocalVar;
+#X text 281 392 you can send \, receive between local addresses using:
+;
+#X text 282 327 float stores a number. \$0 is a special syntax \, for
+unique patch id-s. really useful for dynamic patching and local-only
+variables. these are visible in the scope of this window (including
+its subpatches);
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;

@@ -1,0 +1,174 @@
+#N canvas 88 114 1366 882 10;
+#X obj 29 216 print;
+#X obj 29 163 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 52 162 bang;
+#X msg 87 163 message;
+#X floatatom 153 164 5 0 0 0 - - -;
+#X text 196 165 numbers;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array array 100 float 3;
+#A 0 58.5 58.5 58.5 58.5 58.5 58.5 58.5 58.5 58.5 58.625 58.75 58.875
+59 59.125 59.25 59.375 59.5 59.625 59.75 59.8636 59.9773 60.0909 60.2045
+60.3182 60.4318 60.5455 60.6591 60.7727 60.8864 61 61.125 61.25 61.375
+61.5 61.625 61.75 61.875 62 62.125 62.25 61 59.125 57.25 56 54.75 52.25
+49.75 47.25 44.75 41.8333 38.9167 36 34.75 33.5 32.25 31 29.75 28.5
+26.9375 25.375 23.8125 22.25 21 19.75 18.5 17.875 17.25 16 23.5 22.25
+63.5 63.5 63.5 63.5 63.5 63.5 63.5 63.5 63.5 63.5 63.5 63.5 63.5 63.5
+63.5 63.5 63.5 63.5 63.5 63.5 63.5 63.5 63.5 63.5 63.5 63.5 63.5 63.5
+62.25 62.25;
+#X coords 0 0 99 100 100 80 1 0 0;
+#X restore 294 164 graph;
+#X obj 407 200 tabread array;
+#X obj 407 225 print;
+#X floatatom 407 176 5 0 0 0 - - -;
+#X obj 602 229 tabwrite array;
+#X obj 601 174 random 100;
+#X obj 600 151 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 406 147 read values from array;
+#X text 631 147 write values to array;
+#X text 789 195 <- data conversion & ordering (right - to - left);
+#X obj 601 198 trigger float float;
+#X text 725 198 =;
+#X obj 739 197 t f f;
+#X text 25 70 Sonic Instruments Workshop / 2015;
+#X obj 7 45 cnv 15 100 20 empty empty Pd-Basics 20 12 1 24 -262144
+-66577 0;
+#N canvas 481 488 577 416 subpatch 0;
+#X text 121 83 I'm a subpatch. It's hard to make me modular. Use me
+only for quick hacks and experiments or if you know you don't want
+to reuse my subroutines...;
+#X obj 122 147 inlet;
+#X obj 121 225 outlet;
+#X text 179 147 send me data from outside;
+#X text 179 223 pass over data to outside;
+#X text 91 182 ... do some nice things here;
+#X restore 31 346 pd subpatch;
+#X text 29 318 Subpatches;
+#X text 193 316 Abstractions;
+#X obj 193 346 Node;
+#X text 360 315 Transferring data;
+#X text 362 343 connect \, or;
+#X obj 440 344 send address;
+#X obj 527 344 receive address;
+#X text 439 368 (address is the name to send/receive between);
+#X obj 742 343 value my_variable;
+#X obj 855 343 value my_variable;
+#X msg 742 318 42;
+#X obj 855 367 print;
+#X obj 855 319 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 973 343 shared variables;
+#X text 72 217 object (processing messages);
+#X obj 29 482 metro 1000;
+#X obj 29 513 counter;
+#X floatatom 29 551 5 0 0 0 - - -;
+#X obj 29 455 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 30 428 loadbang;
+#X obj 120 564 timer;
+#X floatatom 120 593 5 0 0 0 - - -;
+#X obj 118 514 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 118 540 t b b;
+#X text 117 480 <- repeating events;
+#X text 165 564 <- measuring time between events;
+#X obj 409 508 delay 300;
+#X obj 487 508 delay 600;
+#X obj 409 479 t b b;
+#X obj 409 539 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 488 539 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 561 505 <- delaying events;
+#X obj 5 121 cnv 15 100 20 empty empty Elements-Datatypes 20 12 1 24
+-262144 -66577 0;
+#X obj 5 273 cnv 15 100 20 empty empty Topology-Dataflow-Patching 20
+12 1 24 -262144 -66577 0;
+#X obj 4 386 cnv 15 100 20 empty empty Time 20 12 1 24 -262144 -66577
+0;
+#X text 22 88 (c) stc@binaura.net;
+#X obj 5 628 cnv 15 100 20 empty empty Sounds 20 12 1 24 -262144 -66577
+0;
+#X obj 28 787 dac~;
+#X obj 29 739 *~;
+#X obj 80 709 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 29 674 noise~;
+#X text 79 675 white noise;
+#X text 79 735 amplify;
+#X text 78 785 left/right speakers;
+#X obj 245 785 dac~;
+#X obj 246 734 *~;
+#X obj 278 704 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 246 672 osc~ 1200;
+#X obj 312 672 osc~ 60;
+#X obj 246 702 *~;
+#X text 314 704 modulate sines;
+#X obj 896 65 loadbang;
+#X msg 896 91 \; pd dsp 1 \;;
+#X text 958 64 message to start dsp;
+#X obj 457 786 dac~;
+#X obj 457 733 readsf~;
+#X msg 457 705 open sound.wav \, start;
+#X text 457 672 play a sound;
+#X obj 682 679 phasor~ 1;
+#X obj 682 745 tabread~ array;
+#X text 682 649 sound as controller (precise \, 44100 / s);
+#X obj 682 706 *~ 99;
+#X obj 680 798 dac~;
+#X obj 682 776 *~;
+#X obj 716 769 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 760 677 <- saw wave at 1Hz;
+#X text 760 703 <- we have 100 elements in our array;
+#X text 779 743 <- read values at the indexes;
+#X text 778 721 (notice: we are multiplying audio this time);
+#X connect 1 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 7 0 8 0;
+#X connect 9 0 7 0;
+#X connect 11 0 16 0;
+#X connect 12 0 11 0;
+#X connect 16 0 10 0;
+#X connect 16 1 10 1;
+#X connect 31 0 33 0;
+#X connect 32 0 30 0;
+#X connect 34 0 31 0;
+#X connect 37 0 38 0;
+#X connect 37 0 44 0;
+#X connect 38 0 39 0;
+#X connect 40 0 37 0;
+#X connect 41 0 40 0;
+#X connect 42 0 43 0;
+#X connect 44 0 45 0;
+#X connect 44 0 50 0;
+#X connect 45 0 42 0;
+#X connect 45 1 42 1;
+#X connect 48 0 51 0;
+#X connect 49 0 52 0;
+#X connect 50 0 48 0;
+#X connect 50 1 49 0;
+#X connect 60 0 59 0;
+#X connect 60 0 59 1;
+#X connect 61 0 60 1;
+#X connect 62 0 60 0;
+#X connect 67 0 66 0;
+#X connect 67 0 66 1;
+#X connect 68 0 67 1;
+#X connect 69 0 71 0;
+#X connect 70 0 71 1;
+#X connect 71 0 67 0;
+#X connect 73 0 74 0;
+#X connect 77 0 76 0;
+#X connect 77 0 76 1;
+#X connect 78 0 77 0;
+#X connect 80 0 83 0;
+#X connect 81 0 85 0;
+#X connect 83 0 81 0;
+#X connect 85 0 84 0;
+#X connect 85 0 84 1;
+#X connect 86 0 85 1;
