@@ -1,4 +1,4 @@
-#N canvas 335 227 1025 597 10;
+#N canvas 335 227 1143 623 10;
 #X text 69 89 I'm an abstraction \, in a separate file. Use me if you
 want to make modular code and would like to avoid repetitive patching.
 ;
@@ -18,5 +18,24 @@ want to make modular code and would like to avoid repetitive patching.
 unique patch id-s. really useful for dynamic patching and local-only
 variables. these are visible in the scope of this window (including
 its subpatches);
+#X obj 698 367 symbol \$1;
+#X text 692 195 ACESSING PARAMETERS (ARGUMENTS);
+#X obj 775 365 f \$2;
+#X obj 825 367 f \$3;
+#X obj 704 515 print;
+#X obj 696 324 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 773 322 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 825 322 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 687 256 access each parameter that is defined in the object
+box. order & data type matters;
 #X connect 4 0 5 0;
 #X connect 5 0 3 0;
+#X connect 12 0 16 0;
+#X connect 14 0 16 0;
+#X connect 15 0 16 0;
+#X connect 17 0 12 0;
+#X connect 18 0 14 0;
+#X connect 19 0 15 0;
