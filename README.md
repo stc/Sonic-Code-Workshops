@@ -50,6 +50,7 @@ Open the sketch in Processing, hit run. You should hear the sounds made by Pd, a
 ## Examples
 
 - S01_HelloPd : the official example that arrives with the puredataP5 repository.
+- S02_PureDataBasics : supercompressed overview of objects, workflow, time & making sounds in Pure Data 
 
 
 All code is under GPLv3 License.
