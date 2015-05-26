@@ -45,12 +45,13 @@ The main sketch can be edited with the Processing IDE that is built in the Proce
 
 ## Testing your project
 
-Open the sketch in Processing, hit run. You should hear the sounds made by Pd, and interact with the Processing interface. To test on an Android device, switch the sketch into Android mode. (More on this, later)
+Open the sketch in Processing, hit run. You should hear the sounds made by Pd, and interact with the Processing interface. To test on an Android device, first follow the steps on this [guide on the Processing + Android wiki](https://github.com/processing/processing-android/wiki). After steps are complete, switch the sketch into Android mode and run your sketch in the android simulator or an Android Device. Please note, Android versions below 2.3.3 (API 10) won't work with Processing.
 
 ## Examples
 
 - S01_HelloPd : the official example that arrives with the puredataP5 repository.
 - S02_PureDataBasics : supercompressed overview of objects, workflow, time & making sounds in Pure Data 
+- S03_ProcessingBasics : overview of user inputs, functions, for loop and classes in Processing
 
 
 All code is under GPLv3 License.
