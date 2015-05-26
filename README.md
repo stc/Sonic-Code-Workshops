@@ -52,6 +52,7 @@ Open the sketch in Processing, hit run. You should hear the sounds made by Pd, a
 - S01_HelloPd : the official example that arrives with the puredataP5 repository.
 - S02_PureDataBasics : supercompressed overview of objects, workflow, time & making sounds in Pure Data 
 - S03_ProcessingBasics : overview of user inputs, functions, for loop and classes in Processing
+- S04_SimpleUIElements : creating basic UI elements in processing, trigger sounds & adjust panning on the Pd side
 
 
 All code is under GPLv3 License.
