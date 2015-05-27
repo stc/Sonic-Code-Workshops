@@ -1,0 +1,38 @@
+#N canvas 355 321 907 750 10;
+#X obj 199 252 / 10;
+#X text 195 454 first argument: < name of soundfile >;
+#X text 195 471 second argument: < number of polyphony >;
+#X text 196 489 optional third argument: < samplerate >;
+#X obj 199 323 pack f f;
+#X obj 270 233 + 1;
+#X obj 199 232 + 1;
+#X obj 270 254 / 30;
+#X obj 270 211 random 30;
+#X text 269 324 trigger sample 1st el: pitch \, 2nd el: vol;
+#X obj 199 155 t f b;
+#X obj 201 589 catch~ out;
+#X obj 201 624 dac~;
+#X obj 199 44 r trigger;
+#X text 472 413 <- argument sets number of polyphonic sounds;
+#X text 276 42 receiving trigger event from Processing;
+#X text 276 62 this value determines the pitch;
+#X text 344 211 create random random volume to make it more plastic
+;
+#X text 441 489 <- this is useful when designing for mobile devices
+;
+#X text 280 590 catch all audio from abstractions inside createPoly
+;
+#X obj 199 113 / 2;
+#X obj 199 415 patches/createPoly ../piano.wav 20;
+#X connect 0 0 4 0;
+#X connect 4 0 21 0;
+#X connect 5 0 7 0;
+#X connect 6 0 0 0;
+#X connect 7 0 4 1;
+#X connect 8 0 5 0;
+#X connect 10 0 6 0;
+#X connect 10 1 8 0;
+#X connect 11 0 12 0;
+#X connect 11 0 12 1;
+#X connect 13 0 20 0;
+#X connect 20 0 10 0;

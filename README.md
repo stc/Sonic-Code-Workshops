@@ -49,10 +49,12 @@ Open the sketch in Processing, hit run. You should hear the sounds made by Pd, a
 
 ## Examples
 
-- S01_HelloPd : the official example that arrives with the puredataP5 repository.
-- S02_PureDataBasics : supercompressed overview of objects, workflow, time & making sounds in Pure Data 
-- S03_ProcessingBasics : overview of user inputs, functions, for loop and classes in Processing
-- S04_SimpleUIElements : creating basic UI elements in processing, trigger sounds & adjust panning on the Pd side
+- **S01_HelloPd** : the official example that arrives with the puredataP5 repository.
+- **S02_PureDataBasics** : supercompressed overview of objects, workflow, time & making sounds in Pure Data 
+- **S03_ProcessingBasics** : overview of user inputs, functions, for loop and classes in Processing
+- **S04_SimpleUIElements** : creating basic UI elements in processing, trigger sounds & adjust panning on the Pd side
+- **S05_VisualMusic** : Demonstrating how to play polyphonic sound samples of the same sound 
+with different pitches. The behaviour of visual elements are triggering the sounds. The example is using [PolySample](https://github.com/stc/polySample) , a custom made polyphonic soundplayer with adjustable sample speed. 
 
 
 All code is under GPLv3 License.
