@@ -67,3 +67,8 @@ void mousePressed() {
   }
 }
 
+void pdPrint(String s) {
+  // Handle string s, printed by Pd
+  println(s);
+}
+
