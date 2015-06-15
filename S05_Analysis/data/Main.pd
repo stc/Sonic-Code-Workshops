@@ -1,0 +1,120 @@
+#N canvas 398 95 723 811 10;
+#X obj 100 67 adc~;
+#X obj 100 115 +~;
+#X obj 100 144 /~ 2;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array pd_soundwave 64 float 3;
+#A 0 0.00104669 0.0013548 0.000392761 0.000307294 -0.00205967 -0.00223695
+0.00226304 0.00370966 3.6787e-05 -0.00207505 -0.00115219 -8.45173e-05
+5.8226e-05 -0.0015135 -0.00135939 0.00128656 -0.000467494 -0.00228773
+0.000983342 0.000929434 -1.82112e-05 0.00248903 0.00108217 -0.00154616
+-0.000977606 0.000478811 0.00203826 0.000720565 0.000207733 0.00327907
+0.00288118 0.000206128 -0.00240641 -0.00366556 0.00176172 0.00490353
+-0.000805957 -0.00318212 0.00246113 0.0048145 -0.000483201 -0.000816112
+0.00225263 -0.00181101 -0.00072748 0.0040787 0.00145733 0.000809872
+-0.00111572 -0.00517088 -0.00191768 1.38099e-05 -0.000219698 0.00143695
+0.00185688 0.00349036 0.00258165 -0.00121397 -0.00201392 -0.000457893
+0.00130301 -0.000324557 -0.00214399 -0.00170147;
+#X coords 0 1 63 -1 200 140 1;
+#X restore 482 81 graph;
+#X obj 152 203 tabwrite~ pd_soundwave;
+#X obj 375 151 metro 20;
+#X obj 375 130 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 375 107 1;
+#X obj 374 45 r init;
+#N canvas 251 23 1570 828 fft 1;
+#X obj 56 227 line 0 0.1;
+#X obj 56 272 / 2;
+#X obj 56 292 mtof;
+#X msg 56 206 6 \, 273 26.7;
+#X obj 56 250 t f f;
+#X obj 91 271 - 6;
+#X obj 56 312 / 44100;
+#X obj 56 168 tgl 15 0 empty empty empty 0 -6 0 8 -262144 -1 -1 1 1
+;
+#X obj 55 66 loadbang;
+#X msg 56 148 1;
+#X text 145 210 transformation to log scale;
+#N canvas 0 22 671 536 (subpatch) 0;
+#X array logFFT 256 float 0;
+#X coords 0 200 255 0 400 150 1 0 0;
+#X restore 55 477 graph;
+#X obj 56 333 * 4096;
+#X obj 56 186 metro 20;
+#X obj 56 392 moses 0;
+#X obj 521 65 inlet~;
+#X text 581 65 <- sound to be analyzed;
+#X text 53 627 20 Hz;
+#X text 414 627 22 kHz;
+#X text 145 227 (based on T. Brinkmann's code);
+#X text 912 357 Linear Graph;
+#X text 51 668 Logarithmic Graph;
+#X obj 56 424 tabwrite logFFT;
+#X obj 56 361 tabread4 spectrum;
+#X text 150 393 (avoid negative values);
+#X text 149 184 refresh rate;
+#N canvas 107 22 688 468 spectrum 0;
+#X obj 499 274 rfft~;
+#N canvas 51 367 1153 478 (subpatch) 0;
+#X array spectrum 256 float 0;
+#X coords 0 256 255 0 400 150 1 0 0;
+#X restore 60 134 graph;
+#X obj 499 301 *~;
+#X obj 526 301 *~;
+#X obj 499 352 biquad~ 0 0 0 0 1;
+#X obj 499 330 q8_sqrt~;
+#X text 58 283 20Hz;
+#X obj 499 103 inlet~;
+#X text 426 284 22KHz;
+#X text 76 52 85.6 element / sec @ 44.1 khz;
+#X obj 544 373 bang~;
+#X obj 78 27 block~ 512 4 1;
+#X obj 499 396 tabwrite~ spectrum;
+#X connect 0 0 2 0;
+#X connect 0 0 2 1;
+#X connect 0 1 3 0;
+#X connect 0 1 3 1;
+#X connect 2 0 5 0;
+#X connect 3 0 5 0;
+#X connect 4 0 12 0;
+#X connect 5 0 4 0;
+#X connect 7 0 0 0;
+#X connect 10 0 12 0;
+#X coords 0 -1 1 1 420 200 1 50 100;
+#X restore 912 143 pd spectrum;
+#X obj 56 91 t b b;
+#X msg 152 115 \; pd dsp 1;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 3 0 0 0;
+#X connect 4 0 1 0;
+#X connect 4 1 5 0;
+#X connect 5 0 22 1;
+#X connect 6 0 12 0;
+#X connect 7 0 13 0;
+#X connect 8 0 27 0;
+#X connect 9 0 7 0;
+#X connect 12 0 23 0;
+#X connect 13 0 3 0;
+#X connect 14 1 22 0;
+#X connect 15 0 26 0;
+#X connect 23 0 14 0;
+#X connect 27 0 9 0;
+#X connect 27 1 28 0;
+#X coords 0 0 1 1 410 200 1 50 450;
+#X restore 100 397 pd fft;
+#X text 152 231 Sending sound signal to pd_soundwave continuously;
+#X text 147 127 make incoming sound stereo;
+#X text 130 369 a logarithmic FFT analysis \, look inside for more
+;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 2 0 9 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
+#X connect 8 0 7 0;
