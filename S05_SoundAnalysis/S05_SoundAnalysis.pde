@@ -25,12 +25,18 @@ float[] spectrum = new float[spectrumSize];
 //  Loudest value of the spectrum (aka gain)
 float loudest = 0;
 
+//  A PGraphics object to display Spectrogram
+PGraphics sg;
+
 void setup() {
   size( 800, 600, P3D );
   pd = new PureData(this, 44100, 2, 2);
   pd.openPatch("Main.pd");
   pd.start();
   pd.sendBang("init");
+  
+  //  create surface for the spectrogram, height is the bin number
+  sg = createGraphics(width, 256);
 }
 
 void draw() {
@@ -67,10 +73,17 @@ void draw() {
   noStroke();
   text( "GAIN: " + loudest, 20, 20 );
   rect( 20, 25, 30, loudest / 5 );
+  
+  //  display spectogram, draw everything into the sg PGraphics object
+  sg.beginDraw();
+  for (int i =0; i< spectrumSize-1; i++) {
+    sg.stroke(spectrum[i]*10);
+    sg.point(frameCount%width,256-i);
+  }
+  sg.endDraw();
+  image(sg,0,0);
 }
 
 void pdPrint(String s) {
   println( s );
 }
-
-
