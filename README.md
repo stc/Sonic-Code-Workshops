@@ -54,7 +54,7 @@ Open the sketch in Processing, hit run. You should hear the sounds made by Pd, a
 - **S03_ProcessingBasics** : overview of user inputs, functions, for loop and classes in Processing
 - **S04_SimpleUIElements** : creating basic UI elements in processing, trigger sounds & adjust panning on the Pd side
 - **S05_SoundAnalysis** : getting and displaying waveform, spectrum and gain of an incoming live soundstream. This example also shows, how to read arrays from within PureData
-- **S06_Sonification : turning colors into sounds. Pixel color values are driving corresponding oscillator's pitches 
+- **S06_Sonification** : turning colors into sounds. Pixel color values are driving corresponding oscillator's pitches 
 - **S07_GenerativeMusic** : creating self-modifying melodies and rythm patterns on the Pd side, visualize actual sonic parameters on the Processing side. This patch is using some abstractions from an excellent high-level object library for pd, named [RjLib](https://github.com/rjdj/rjlib). This set of building blocks (synths, logical mappings, instruments, effects & utilities) is one of the most important addons ever made for Pure Data. rjLib originally came alive with the rise of mobile platforms (iOS, Android) made by the RjDj crew, it is intended to make interactive music in a very unique and streamlined way. 
 - **S08_VisualMusic** : Demonstrating how to play polyphonic sound samples of the same sound 
 with different pitches. The behaviour of visual elements are triggering the sounds. The example is using [PolySample](https://github.com/stc/polySample) , a custom made polyphonic soundplayer with adjustable sample speed. 
