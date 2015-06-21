@@ -13,13 +13,15 @@ Sonic Instruments Workshop / 2015
 import org.puredata.processing.PureData;
 PureData pd;
 
+//  variables for display soundwave
 float[] soundWave;
 PGraphics soundWaveGfx;
 int soundLength;
+int vDivide;
 
+//  variables for controllers
 int playPos;
 int poly, ppoly;
-int vDivide;
 
 // UI
 Slider sliderDensity, sliderRandomness, sliderVoices, sliderLength;
@@ -34,11 +36,11 @@ void setup() {
   pd.openPatch("Main.pd");
   pd.start();
   
+  //  we draw the soundwave only once, into a PGraphics image buffer
   soundWaveGfx = createGraphics(width, vDivide);
   soundLength = pd.arraySize( "P5-buffer");
   soundWave = new float[ soundLength ];
   pd.readArray( soundWave, 0, "P5-buffer", 0, soundLength );
-  
   soundWaveGfx.beginDraw();
   soundWaveGfx.background(220);
   soundWaveGfx.stroke(0);
@@ -48,6 +50,7 @@ void setup() {
   }
   soundWaveGfx.endDraw(); //<>//
   
+  //  setup sliders
   sliderDensity = new Slider( 10, height - 100, 100, 10, 2, "DENSITY" );
   sliderRandomness = new Slider( 10, height - 80, 100, 10, 2, "RANDOMNESS" );
   sliderVoices = new Slider( 200, height - 100, 100, 10, 2, "VOICES" );
@@ -63,6 +66,7 @@ void draw() {
   fill(255,0,0);
   rect( playPos, 0, 2, vDivide);
   
+  //  handle sliders
   sliderDensity.update();
   sliderDensity.display();
   sliderRandomness.update();
@@ -72,6 +76,7 @@ void draw() {
   sliderLength.update();
   sliderLength.display();
   
+  // send slider values to pd engine  
   pd.sendFloat( "P5-density", sliderDensity.getPos() * 1000 );
   pd.sendFloat( "P5-randomize", sliderRandomness.getPos() );
   poly = (int)( sliderVoices.getPos() * 32 - 5);
