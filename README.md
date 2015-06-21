@@ -58,6 +58,7 @@ Open the sketch in Processing, hit run. You should hear the sounds made by Pd, a
 - **S07_GenerativeMusic** : creating self-modifying melodies and rhythm patterns on the Pd side, visualize actual sonic parameters on the Processing side. This patch is using some abstractions from an excellent high-level object library for pd, named [RjLib](https://github.com/rjdj/rjlib). This set of building blocks (synths, logical mappings, instruments, effects & utilities) is one of the most important addons ever made for Pure Data. rjLib originally came alive with the rise of mobile platforms (iOS, Android) made by the RjDj crew, it is intended to make interactive music in a very unique and streamlined way. 
 - **S08_VisualMusic** : Demonstrating how to play polyphonic sound samples of the same sound 
 with different pitches. The behaviour of visual elements are triggering the sounds. The example is using [PolySample](https://github.com/stc/polySample) , a custom made polyphonic soundplayer with adjustable sample speed. 
+- **S09_GrainField** : A 32 channel granular synthesis engine with custom controls. This technique is about taking apart an existing sound sample into small grains that remain individually controllable fragments. Useful for creating sound textures, sound design, rythmic patterns.
 
 
 All code is under GPLv3 License.
