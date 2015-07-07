@@ -27,7 +27,7 @@ void setup() {
   //  start Pd
   pd = new PureData(this, 44100, 0, 2);
   //  android file search path (data must be copied to sd card). more on this later
-  //  pd.openPatch("//sdcard//WS/Main.pd");
+  //pd.openPatch("//sdcard//WS/Main.pd");
   pd.openPatch("Main.pd");
   pd.start();
   

@@ -18,14 +18,16 @@ Then, by separating all that sonic power from concerns about hardware input and 
 
 ## Installation instructions
 
-Download & install [Pure Data](http://puredata.info/downloads) and [Processing](https://processing.org/download/). Select your operating system, the java library that we use for connecting these two tools is compiled for all major platforms. Download the Processing library of [LibPd](https://github.com/libpd/puredatap5/). After download, extract, and place PureDataP5 to your processing sketches directory so that Processing will know from where to load the library. By default, it can be found under your ~/Documents folder. Open any example from the source and start experimenting.
+Download & install [Pure Data](http://puredata.info/downloads) and [Processing](https://processing.org/download/). Select your operating system, the java library that we use for connecting these two tools is compiled for all major platforms. Download the Processing library of [LibPd](https://github.com/libpd/puredatap5/). The directory PureDataP5 contains the source code and dependencies, configured
+for development on Mac OS. You won't need to look at this unless you want to participate in the development of this library. If you just want to use libpd with Processing, then you can unpack the file
+pdp5.zip into the libraries folder of Processing. On my Mac, that folder is Documents/Processing/libraries. Open any example from the source and start experimenting. The compiled library should work with Linux & Windows too, however we couldn't test.
 
 There are interesting examples at the official [LibPd site](http://www.libpd.cc) on LibPd related projects.
 
 
 ## Folder Structure
 
-All the examples are look like this:
+All the examples look like this:
 
 .     
 **sketchname.pde** our main processing sketch (same name as folder name)     
