@@ -1,0 +1,30 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-title" content="Touch Example">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="apple-touch-startup-image" href="startup-image.png">
+	<script language="javascript" type="text/javascript" src="./data/jquery-1.11.3.min.js"></script>
+	<script language="javascript" type="text/javascript" src="./data/p5.js"></script>
+  	<script language="javascript" type="text/javascript" src="./data/webpd-latest.min.js"></script>
+  	<script language="javascript" type="text/javascript" src="./data/sketch.js"></script>
+  	<style> body {padding: 0; margin: 0;} </style>
+  	<script language="javascript" type="text/javascript">
+  		document.ontouchmove = function(event){
+    		event.preventDefault();
+		}
+	</script>
+</head>
+
+<body>
+	<!-- init WebPd --> 
+	<script language="javascript" type="text/javascript">
+      	var patch
+      	$.get('./data/main.pd', function(mainStr) {  
+      		patch = Pd.loadPatch(mainStr);
+      	})
+  	</script>
+</body>
+</html>
