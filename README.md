@@ -1,7 +1,7 @@
 # Sonic-Code-Workshops
 Sample code for "Sonic instruments" & "Interactive Sonification" workshops, aka tools designed with Pure Data &amp; Processing
 
-The aim of the workshop is to introduce simple and easy learnable ways to create interactive sounds and music. The workshop is based on two popular, open source languages and the combination of these. Using these free tools it is easy to create user interactions that are targeting the web or mobile devices. By the end of the workshop, each participant will have a general knowledge about (musical, artistic) interfaces and their cognitive extensions, basics of digital sound & interface design.
+The aim of these workshops is to introduce simple and easy learnable ways to create interactive sounds, music & sonification. The workshops are based on two popular, open source languages and the combination of these. Using these free tools it is easy to create user interactions that are targeting the web or mobile devices. 
 
 For more info, visit: 
 [Interactive Sonification](http://spektrumberlin.de/events/detail/interactive-sonification.html) & [Sonic Instruments](http://spektrumberlin.de/events/detail/sonic-instruments.html) organized by [Spektrum](http://spektrumberlin.de/home.html) (Berlin, 2018)
@@ -20,9 +20,8 @@ Then, by separating all that sonic power from concerns about hardware input and 
 
 ## Installation instructions
 
-Download & install [Pure Data](http://puredata.info/downloads) and [Processing](https://processing.org/download/). Select your operating system, the java library that we use for connecting these two tools is compiled for all major platforms. Download the Processing library of [LibPd](https://github.com/libpd/puredatap5/). The directory PureDataP5 contains the source code and dependencies, configured
-for development on Mac OS. You won't need to look at this unless you want to participate in the development of this library. If you just want to use libpd with Processing, then you can unpack the file
-pdp5.zip into the libraries folder of Processing. On my Mac, that folder is Documents/Processing/libraries. Open any example from the source and start experimenting. The compiled library should work with Linux & Windows too, however we couldn't test.
+Download & install [Pure Data](http://puredata.info/downloads) and [Processing](https://processing.org/download/). Select your operating system, the java library that we use for connecting these two tools is compiled for all major platforms. Download the Processing library of [LibPd](https://github.com/libpd/puredatap5/). The pdp5 folder contains the source code and dependencies, configured for development on Mac OS. You won't need to look at this unless you want to participate in the development of this library. If you just want to use libpd with Processing, then you can unpack the file
+pdp5.zip into the libraries folder of Processing. On my Mac, that folder is Documents/Processing/libraries. Open any example from the source and start experimenting. The compiled library should work with Linux & Windows too.
 
 There are interesting examples at the official [LibPd site](http://www.libpd.cc) on LibPd related projects.
 
