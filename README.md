@@ -5,7 +5,7 @@ The aim of these workshops is to introduce simple and easy learnable ways to cre
 
 For more info, visit: 
 [Interactive Sonification](http://spektrumberlin.de/events/detail/interactive-sonification.html) & [Sonic Instruments](http://spektrumberlin.de/events/detail/sonic-instruments.html) organized by [Spektrum](http://spektrumberlin.de/home.html) (Berlin, 2018)
-[Workshop site from ISEA (Vancouver) & ICAD (Graz) 2015](http://www.binaura.net/stc/ws/isea/)
+There are also useful insights on the [workshop site](http://www.binaura.net/stc/ws/isea/) from ISEA (Vancouver) & ICAD (Graz), 2015
 
 ## What tools do we use?
 
