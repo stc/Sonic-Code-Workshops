@@ -1,8 +1,6 @@
 /* 
 
-Sonification example
-Sonic Instruments Workshop / 2015
-(c) stc@binaura.net
+Static Image Sonification example
 
 */
 

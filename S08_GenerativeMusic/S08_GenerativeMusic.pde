@@ -6,8 +6,6 @@ Some parameters are sent from PureData to Processing to be able to see the actua
 It is also using a pgraphics object to draw some lines where background is not erased so drawn entities become 
 continuous.
 
-Sonic Instruments Workshop / 2015
-(c) stc@binaura.net
 
 */
 

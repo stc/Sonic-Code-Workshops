@@ -1,8 +1,6 @@
 /* 
 
 Processing basics: introducing input events, functions, for loop, classes 
-Sonic Instruments Workshop / 2015
-(c) stc@binaura.net
 
 */
 

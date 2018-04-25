@@ -1,0 +1,13 @@
+#N canvas 467 247 589 363 10;
+#X obj 244 232 osc~;
+#X obj 244 153 r \$1;
+#X obj 244 284 throw~ outPut;
+#X text 102 55 A simple abstraction for creating sinewave. The argument
+of this is the address where Processing sends the corresponding pitch
+value;
+#X obj 244 261 *~ 0.2;
+#X obj 244 193 * 100;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 4 0 2 0;
+#X connect 5 0 0 0;

@@ -1,8 +1,6 @@
 /* 
 
 Building simple UI elements: buttons & sliders
-Sonic Instruments Workshop / 2015
-(c) stc@binaura.net
 
 */
 

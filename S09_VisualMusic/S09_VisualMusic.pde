@@ -3,9 +3,6 @@
 Visual music example. Demonstrating how to play polyphonic sound samples of the same sound 
 with different pitches. The behaviour of visual elements are triggering the sounds. 
 
-Sonic Instruments Workshop / 2015
-(c) stc@binaura.net
-
 */
 
 

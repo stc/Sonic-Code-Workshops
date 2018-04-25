@@ -4,9 +4,6 @@ Granular Field: A 32 channel granular synthesis engine with custom controls. Thi
 taking apart an existing sound sample into small grains that remain individually controllable fragments. 
 Useful for creating sound textures, sound design, rythmic patterns.
 
-Sonic Instruments Workshop / 2015
-(c) stc@binaura.net
-
 */
 
 

@@ -1,0 +1,18 @@
+#N canvas 197 198 876 603 10;
+#X obj 124 333 dac~;
+#X obj 125 287 catch~ outPut;
+#X text 120 41 A Very Simple Sonification Example;
+#X text 117 148 Create the sounds...;
+#X text 125 261 Collect the sounds...;
+#X obj 178 183 Node n1;
+#X obj 124 183 Node n0;
+#X obj 234 184 Node n2;
+#X obj 287 184 Node n3;
+#X obj 341 184 Node n4;
+#X obj 394 184 Node n5;
+#X obj 445 184 Node n6;
+#X obj 497 185 Node n7;
+#X obj 549 186 Node n8;
+#X obj 601 186 Node n9;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
