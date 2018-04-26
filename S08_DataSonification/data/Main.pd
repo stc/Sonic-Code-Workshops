@@ -1,0 +1,16 @@
+#N canvas 197 198 876 603 10;
+#X obj 124 333 dac~;
+#X obj 124 112 r value;
+#X text 120 41 Data Sonification Example;
+#X obj 123 276 osc~;
+#X obj 199 277 osc~;
+#X obj 123 179 mtof;
+#X obj 123 149 + 30;
+#X obj 193 251 + 200;
+#X connect 1 0 6 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 1;
+#X connect 5 0 3 0;
+#X connect 5 0 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 4 0;
